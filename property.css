@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+/*aniamtion for the elevate homes*/
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Background color for the loading screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears on top of your content */
+}
+
+.loading-animation {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+.loading-animation>.tree{
+  margin-left: -2vw;
+}
+.loading-animation>.flower{
+    margin-left: -2vw;
+}
+.loading-animation>.tree,.flower,.fruit{
+    animation-name: sohaib;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes sohaib{
+    0%{
+        transform: scale(1.4);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    75%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+.spinner {
+    /* Add your custom spinner CSS or use an image */
+    background: none;
+}
+/*Chat GPT CODE STARTS HERE FOR POPUP FORM*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 60%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form textarea,
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #004d42;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*AND THE POPUP FORM ENDS HERE*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 13vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    transition: 0.6s;    
+    z-index: 999;
+    border-bottom: 1px solid gainsboro;
+    background-color: transparent;
+}
+header>.fa-bars{
+    position: absolute;
+    left: 50vw;
+    font-size: 40px;
+    color: #fff;
+    display: none;
+}
+header>.fa-times{
+    position: absolute;
+    left: 50vw;
+    font-size: 40px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+header>.order-list{
+    position: absolute;
+    top: 13vh;
+    left: 0;
+    width: 200px;
+    line-height: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #004d42;
+    display: none;
+    transition: all 2s ease-in;
+}
+header>.order-list>hr{
+    width: 100%;
+}
+.header-2{
+    position: fixed;
+    top: 50vh;
+    left: -45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+    font-size: 40px;
+    z-index: 999;
+    background-color: none;
+}
+.header-2>a{
+    text-decoration: none;
+    color: #000;
+}
+.header-2>a>.fa-whatsapp{
+    color: #25d366;
+}
+.header-2>a>.fa-facebook{
+    color: #0866ff;
+}
+header>ul{
+    position: relative;
+    top: 0px;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+header>ul>li{
+    position: relative;
+    list-style: none;
+    font-size: 13px;
+    background-color: transparent;
+    padding: 25px 20px;
+    transition: all 0.5s ease-out;
+}
+header>ul>li:hover{
+    background-color: rgba(0,0,0,.5);
+}
+header>ul>li>a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+header.scrolled{
+    background-color:#004d42;
+}
+.begin{
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.5) , rgba(0,0,0,.75)) , url(images/main-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    overflow: visible;
+}
+.begin>.father{
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+}
+.begin>.father>.heading{
+    margin-top: 20vh;
+    margin-left: -3vw;
+}
+.begin>.father>.heading>{
+  display: flex;
+  flex-direction: column;
+}
+.begin>.father>.heading>h1{
+    margin-left: 8vw;
+    color: #fff;
+    font-size: 35px;
+}
+.begin>.father>.heading>h2{
+    color: #fff;
+    font-size: 43px;
+}
+.begin>.father>.float{
+    margin-top: 18vh;
+    margin-left: -28vw;
+    display: flex;
+    gap: .2vw;
+    align-items: center;
+    justify-content: center;
+}
+.float>button{
+    width: 95px;
+    height: 45px;
+    outline: none;
+    border: none;
+}
+.float>button:hover{
+    background-color: #004d42;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    color: #fff;
+}
+.begin>.father>.box{
+    margin-top: 0.3vh;
+    margin-left: -27vw;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px #333;
+    width: 150%;
+    height: 25vh;
+}
+.begin>.father>.box>.inputs{
+    padding-top: 2vh;
+    padding-left: 3vw;
+}
+.begin>.father>.box>.inputs>form{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 3vh;
+    margin-left: 0.25vw;
+}
+.begin>.father>.box>.inputs>form>.what{
+    line-height: 30px;
+}
+.begin>.father>.box>.inputs>form>.what>select{
+  width: 200px;
+  height: 40px;
+}
+.begin>.father>.box>.inputs>form>.what-1>input{
+    width: 200px;
+    height: 40px;
+    outline: none;
+}
+.begin>.father>.box>.inputs>form>.what-2{
+    line-height: 30px;
+}
+.begin>.father>.box>.inputs>form>.what-2>select{
+    width: 200px;
+    height: 40px;
+}
+.begin>.father>.box>.inputs>form>.what-3>.todo>input{
+    width: 200px;
+    height: 40px;
+    outline: none;
+}
+.begin>.father>.box>.inputs>form>.what-3>.todo>select{
+    margin-top: 0.75vh;
+    width: 50px;
+    height: 40px;
+    outline: none;
+}
+.begin>.father>.box>.inputs>form>.submit>button{
+    margin-top: 4vh;
+    background-color: #004d42;
+    width: 170px;
+    height: 40px;
+    border: 1px solid transparent;
+    color:#fff;
+    border-radius: 5px;
+    transition: all 0.5 ease-out;
+}
+.begin>.father>.box>.inputs>form>.submit>button:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.begin-1{
+    position: relative;
+    height: 120vh;
+}
+.begin-1>.troe{
+    position: absolute;
+    top: 25vh;
+    left: 8vw;
+    background-color: #000;
+    width: 80%;
+    height: 6.5vh;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.begin-1>.troe>h3{
+    margin-top: 0.75vh;
+    color: #fff;
+    text-indent: 1.5vw;
+}
+.begin-1>.bre-main{
+position: absolute;
+top: 35vh;
+left: 8vw;
+display: flex;
+gap: 2vw;
+align-items: center;
+justify-content: center;
+}
+.begin-1>.bre-main>.bre-1{
+    background-color: #f8f8f8;
+    width: 340px;
+    height: 400px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.begin-1>.bre-main>.bre-1>img{
+    width: 338px;
+    height: 300px;
+}
+.begin-1>.bre-main>.bre-1>p{
+    font-size: 14px;
+    text-indent: 10px;
+}
+.begin-1>.bre-main>.bre-1>h6{
+    color: #004d42;
+    margin-top: 0.5vh;
+    text-indent: 10px;
+    font-size: 18px;
+}
+.begin-1>a>button{
+    position: absolute;
+    top: 105vh;
+    left: 38.5vw;
+    width: 200px;
+    height: 40px;
+    background-color: #004d42;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.begin-1>a>button:hover{
+    background-color: #000;
+}
+.purchase{
+    position: relative;
+    height: 110vh;
+    background-image: linear-gradient(rgba(35,100,92,1) , rgba(35,100,92,0.5)) , url(images/contactus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.purchase>.moon{
+    position: absolute;
+}
+.purchase>.moon>.head{
+    margin-top: 5vh;
+    margin-left: 25vw;
+    color: #ffff;
+}
+.purchase>.moon>.box-1{
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    width: 55vw;
+    height: 80vh;
+    background-color: #fff;
+}
+.purchase>.moon>.box-1>.inputs-1{
+    margin-top: 5vh;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.purchase>.moon>.box-1>.inputs-1>form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.purchase>.moon>.box-1>.inputs-1>form>.sumbit{
+    margin-top: 3vh;
+    margin-left: 12vw;
+    border-radius: 10px;
+    background-color: #004d42;
+    color: #fff;
+    transition: all 0.5s ease-out;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.purchase>.moon>.box-1>.inputs-1>form>.sumbit:hover{
+    background-color: #000;
+}
+.purchase>.moon>.box-1>.inputs-1>form>input{
+    width: 300px;
+    height: 50px;
+    outline: none;
+    text-indent: 10px;
+}
+.purchase>.moon>.box-1>.inputs-1>form>select{
+    width: 300px;
+    height: 50px;
+    z-index: 1;
+}
+.footer{
+    position: relative;
+    height: 70vh;
+    background-color: #004d42;
+}
+.footer>.extract{
+    position: absolute;
+    top: 5vh;
+   left: 7vw;
+    display: flex;
+    gap: 8vw;
+}
+.footer>.extract>.quick-links>ul{
+    position: absolute;
+    list-style: none;
+    line-height: 40px;
+}
+.footer>.extract>.quick-links>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer>.extract>.social>ul{
+    position: absolute;
+    list-style: none;
+    line-height: 40px;
+}
+.footer>.extract>.social>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer>.extract>.top>ul{
+    position: absolute;
+    list-style: none;
+    line-height: 40px;
+}
+.footer>.extract>.top>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer>.extract>.location>ul{
+    position: absolute;
+    list-style: none;
+    line-height: 40px;
+}
+.footer>.extract>.location>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer>.footer-imp{
+    position: absolute;
+    top: 60vh;
+    background-color: #000;
+    height: 9.75vh;
+    width: 100%;
+}
+.footer>.footer-imp>p{
+    margin-top: 3vh;
+    text-align: center;
+    color: #ffff;
+}
+/* Add CSS for the stylish mobile menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu-icon.active .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.active .bar2 {
+    opacity: 0;
+}
+
+.menu-icon.active .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+@media (max-width:998px){
+    header>.unorder-list{
+        display: none;
+    }
+    header>.fa-bars{
+        display: block;
+        cursor: pointer;
+    }
+}
